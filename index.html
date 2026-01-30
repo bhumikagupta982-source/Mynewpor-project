@@ -1,0 +1,558 @@
+<!DOCTYPE html>      
+<html lang="en">      
+<head>      
+  <meta charset="UTF-8">      
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+  <title>Bhumika Gupta | Portfolio</title>            
+  <style>      
+    * {      
+      margin: 0;      
+      padding: 0;      
+      box-sizing: border-box;      
+      font-family: 'Times New Roman', Times, serif;      
+    }      
+    html {  
+      scroll-behavior: smooth;  
+    }  
+    body {      
+      background: radial-gradient(60rem 60rem at 20% -10%, rgba(255,0,0,0.15), transparent 50%),
+                  radial-gradient(50rem 50rem at 110% 10%, rgba(255,255,255,0.05), transparent 55%),
+                  linear-gradient(135deg, #000000, #050505 55%, #120000);
+      color: #ffffff;      
+      line-height: 1.6;  
+      animation: fadeIn 0.8s ease-in;      
+    }  
+      
+    header {      
+      backdrop-filter: blur(6px);
+      background: rgba(0,0,0,0.85);      
+      color: #ffffff;      
+      padding: 14px 30px;      
+      display: flex;      
+      justify-content: space-between;      
+      align-items: center;      
+      box-shadow: 0 2px 5px rgba(0,0,0,0.6);      
+      position: fixed;      
+      width: 100%;      
+      top: 0;      
+      left: 0;      
+      z-index: 10;      
+      animation: slideDown 0.8s ease;  
+      border-bottom: 1px solid rgba(255,0,0,0.4);
+    }      
+      
+    .logo {      
+      font-size: 24px;      
+      font-weight: 600;      
+      letter-spacing: 0.5px;      
+      transition: 0.3s;  
+    }  
+    .logo:hover {  
+      color: #ff2a2a;  
+      transform: scale(1.07);  
+      text-shadow: 0 0 10px rgba(255,0,0,0.7);
+    }  
+      
+    nav ul {      
+      list-style: none;      
+      display: flex;      
+      gap: 18px;      
+    }      
+    nav a {      
+      color: #ffffff;      
+      text-decoration: none;      
+      font-weight: 500;      
+      padding: 6px 10px;      
+      border-radius: 6px;      
+      transition: 0.3s ease;      
+    }      
+    nav a:hover {      
+      background: #ffffff;      
+      color: #000000;      
+    }      
+      
+    section {      
+      max-width: 950px;      
+      margin: 110px auto 60px;      
+      background: rgba(0,0,0,0.78);      
+      padding: 45px;      
+      border-radius: 16px;      
+      box-shadow: 0 10px 35px rgba(0,0,0,0.55);      
+      transition: 0.35s ease;      
+      animation: fadeUp 0.9s ease;
+      border: 1px solid rgba(255,0,0,0.25);
+      backdrop-filter: blur(10px);
+    }      
+    section:hover {      
+      transform: translateY(-4px);      
+      box-shadow: 0 18px 45px rgba(0,0,0,0.6);      
+    }      
+      
+    .hero {      
+      display: flex;      
+      justify-content: space-between;      
+      align-items: center;      
+      flex-wrap: wrap;      
+      gap: 25px;      
+    }      
+    .hero-content {      
+      flex: 1;      
+      min-width: 260px;      
+    }      
+    .hero h1 {      
+      font-size: 40px;      
+      color: #ff2a2a;      
+      margin-bottom: 10px;      
+    }      
+    .hero p {      
+      font-size: 17px;      
+      color: #dddddd;      
+      margin-bottom: 15px;      
+    }      
+      
+    .typing {
+      display: inline-block;
+      font-weight: 600;
+      color: #ffffff;
+      border-right: 2px solid #ff2a2a;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4.5s steps(40, end) 0.4s forwards, blink 0.8s step-end infinite;
+    }
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blink { 50% { border-color: transparent } }
+      
+   .hero img {      
+      width: 200px;      
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;      
+      border: 3px solid #ff2a2a;      
+      box-shadow: 0 8px 22px rgba(0,0,0,0.6), 0 0 0 6px rgba(255,0,0,0.08);      
+      transition: 0.3s ease;
+      animation: float 3s infinite ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero img::after{
+      content:"";
+      position:absolute;
+      top:-120%;
+      left:-120%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(130deg, transparent 45%, rgba(255,255,255,0.35) 50%, transparent 55%);
+      transform: rotate(10deg);
+      animation: shine 4s linear infinite;
+    }
+    @keyframes shine {
+      0% { transform: translate(-30%, -30%) rotate(10deg); }
+      100% { transform: translate(30%, 30%) rotate(10deg); }
+    }
+    .hero img:hover { transform: scale(1.07); }      
+      
+    h2 {      
+      color: #ff2a2a;      
+      text-align: center;      
+      margin-bottom: 25px;      
+      font-size: 26px;      
+      letter-spacing: 0.5px;      
+      text-shadow: 0 0 12px rgba(255,0,0,0.4);
+    }      
+      
+    .social-links { margin-top: 8px; }
+    .social-links a {      
+      color: #ffb3b3;      
+      font-weight: 600;      
+      text-decoration: none;      
+      margin-right: 15px;      
+      transition: 0.3s;
+      display: inline-block;
+      transform: translateY(0);
+    }      
+    .social-links a:hover {      
+      color: #ffffff;      
+      text-decoration: none;      
+      transform: translateY(-4px);
+      text-shadow: 0 0 10px rgba(255,0,0,0.7);
+    }      
+      
+    .about p {      
+      text-align: center;      
+      font-size: 17px;      
+      line-height: 1.8;      
+      color: #dddddd;      
+    }      
+      
+    .skills .skill-list {      
+      display: flex;      
+      flex-wrap: wrap;      
+      gap: 14px;      
+      justify-content: center;      
+      margin-top: 20px;      
+    }      
+    .skills .skill-list div {      
+      background: #000000;      
+      padding: 10px 12px;      
+      border-radius: 999px;      
+      font-weight: 500;      
+      color: #ff2a2a;      
+      border: 1px solid #330000;      
+      transition: 0.3s ease;      
+      cursor: default;      
+      box-shadow: inset 0 0 0 1px rgba(255,0,0,0.2);
+    }      
+    .skills .skill-list div:hover {      
+      background: #ff2a2a;      
+      color: #000000;      
+      transform: translateY(-3px) scale(1.05);      
+      box-shadow: 0 8px 20px rgba(255,0,0,0.35);
+    }      
+      
+    .skill-bars { 
+      margin-top: 26px; 
+      display: grid; 
+      gap: 12px; 
+    }
+    .bar { 
+      background: rgba(0,0,0,0.7); 
+      border-radius: 10px; 
+      padding: 10px; 
+      border: 1px solid rgba(255,0,0,0.15);
+    }
+    .bar .label { 
+      display:flex; 
+      justify-content:space-between; 
+      margin-bottom:6px; 
+      color:#ffffff; 
+      font-size:14px;
+    }
+    .track { 
+      height: 10px; 
+      background: #000000; 
+      border-radius: 999px; 
+      overflow: hidden; 
+      position: relative;
+    }
+    .fill { 
+      height: 100%; 
+      background: linear-gradient(90deg,#ff2a2a,#ffffff); 
+      width: 0; 
+      border-radius: 999px; 
+      box-shadow: 0 0 12px rgba(255,0,0,0.6);
+      animation: grow 1.8s ease forwards;
+    }
+    .w-95{ --w:95%; } .w-90{ --w:90%; } .w-85{ --w:85%; } .w-80{ --w:80%; }
+    @keyframes grow { to { width: var(--w); } }
+      
+    .proj-list {      
+      display: grid;      
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));      
+      gap: 18px;      
+      margin-top: 25px;
+      perspective: 900px;
+    }      
+      
+    .proj-list div {      
+      background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.75));      
+      padding: 22px;      
+      border-radius: 14px;      
+      box-shadow: 0 10px 28px rgba(0,0,0,0.55);      
+      transition: transform 0.35s ease, box-shadow 0.35s ease;      
+      text-align: center;
+      border: 1px solid rgba(255,0,0,0.15);
+      transform: perspective(800px) rotateX(0) rotateY(0);
+    }      
+      
+    .proj-list div:hover {      
+      transform: perspective(800px) rotateX(6deg) rotateY(-6deg) translateY(-6px);      
+      box-shadow: 0 22px 55px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,0,0,0.15) inset;      
+    }      
+      
+    .proj-title {
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: #ff9b9b;
+      text-shadow: 0 0 10px rgba(255,0,0,0.25);
+    }
+      
+    .proj-btn, .contact button {
+      position: relative;
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 16px;
+      background: #ff2a2a;
+      color: #000000;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.25s;
+      overflow: hidden;
+      border: 1px solid rgba(255,0,0,0.6);
+      box-shadow: 0 8px 22px rgba(255,0,0,0.25);
+    }
+    .proj-btn:hover, .contact button:hover {
+      background: #ffffff;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 14px 30px rgba(255,0,0,0.35);
+    }
+    .proj-btn:active::after, .contact button:active::after {
+      content:"";
+      position:absolute;
+      left:50%; 
+      top:50%;
+      transform: translate(-50%,-50%) scale(0);
+      width: 220%; height: 220%;
+      background: radial-gradient(circle, rgba(255,0,0,0.45) 0%, transparent 60%);
+      animation: ripple 0.6s ease-out forwards;
+      pointer-events:none;
+      border-radius: 50%;
+    }
+    @keyframes ripple { to { transform: translate(-50%,-50%) scale(1); opacity: 0; } }
+      
+    .certifications ul {      
+      list-style: none;      
+      text-align: center;      
+      font-size: 16px;      
+      font-weight: 500;      
+      line-height: 1.9;      
+      color: #dddddd;      
+    }      
+    .certifications li {      
+      transition: 0.3s ease;      
+    }      
+    .certifications li:hover {      
+      color: #ff2a2a;      
+      transform: scale(1.05);      
+    }      
+      
+    .contact {      
+      text-align: center;      
+    }      
+    .contact p {      
+      font-size: 17px;      
+      color: #dddddd;      
+      margin-bottom: 18px;      
+    }      
+    .contact form {      
+      max-width: 600px;      
+      margin: 0 auto;      
+    }      
+    .contact input, .contact textarea {      
+      width: 100%;      
+      padding: 12px;      
+      margin-bottom: 10px;      
+      border-radius: 10px;      
+      border: 1px solid #330000;      
+      font-size: 16px;      
+      background: #000000;
+      color: #ffffff;
+      outline: none;
+      transition: 0.2s;
+    }      
+    .contact input:focus, .contact textarea:focus {      
+      box-shadow: 0 0 0 3px rgba(255,0,0,0.25);
+      border-color: #ff2a2a;
+    }       
+      
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }  
+    @keyframes fadeUp { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }  
+    @keyframes slideDown { from{transform:translateY(-60px); opacity:0;} to{transform:translateY(0); opacity:1;} }  
+    @keyframes float { 0% {transform: translateY(0);} 50% {transform: translateY(-10px);} 100% {transform: translateY(0);} }
+      
+    @media (max-width:768px) {  
+      header {  
+        flex-direction: column;  
+        padding-bottom: 10px;  
+      }  
+      .hero {  
+        text-align: center;  
+      }  
+      section {  
+        margin: 150px 15px;  
+        padding: 30px;  
+      }  
+    }  
+      
+    @media (max-width:480px) {
+      .hero h1 { font-size: 30px; }
+      .hero img { width: 190px; }
+    }
+  </style>      
+</head>      
+<body>      
+  
+  <header>      
+    <div class="logo">Bhumika Gupta</div>      
+    <nav>      
+      <ul>      
+        <li><a href="#home">Home</a></li>      
+        <li><a href="#about">About</a></li>      
+        <li><a href="#skills">Skills</a></li>      
+        <li><a href="#projects">Projects</a></li>      
+        <li><a href="#certifications">Certifications</a></li>      
+        <li><a href="#contact">Contact</a></li>      
+      </ul>      
+    </nav>      
+  </header>      
+  
+  <section id="home" class="hero">      
+    <div class="hero-content">      
+      <h1>Hi, I'm <span style="color:#fff;">Bhumika Gupta</span></h1>      
+      <p>
+        <span class="typing">Creative Web Developer · Java Programmer · Graphic Designer</span>
+      </p>      
+      <div class="social-links">      
+        <a href="https://github.com/bhumikagupta982" target="_blank">GitHub</a>      
+        <a href="https://www.linkedin.com/in/bhumikagupta982/" target="_blank">LinkedIn</a>      
+      </div>      
+    </div>      
+    <img src="WhatsApp Image 2026-01-30 at 11.13.32 PM.jpeg" alt="Bhumika Gupta">      
+  </section>      
+  
+  <section id="about" class="about">      
+    <h2>About Me</h2>      
+    <p>Hello! I'm Bhumika Gupta from Balaghat, Madhya Pradesh.        
+       I'm pursuing <b>B.Sc. Geology</b> and have completed <b>DCA</b>, along with courses in        
+       <b>Java, DSA, and AI tools</b>. I'm passionate about technology, design, and learning new skills.        
+       My goal is to create beautiful and efficient web projects that inspire and make an impact.</p>      
+  </section>      
+  
+  <section id="skills" class="skills">      
+    <h2>Skills</h2>      
+    <div class="skill-list">      
+      <div>☕ Java</div>      
+      <div>🌐 HTML</div>      
+      <div>🎨 CSS</div>      
+      <div>📱 Responsive Design</div>      
+      <div>🖇️ Git & GitHub</div>      
+      <div>🤖 AI Tools</div>      
+      <div>🖌️ Graphic Design</div>      
+    </div>      
+
+    <div class="skill-bars">
+      <div class="bar">
+        <div class="label"><span>HTML</span><span>95%</span></div>
+        <div class="track"><div class="fill w-95"></div></div>
+      </div>
+      <div class="bar">
+        <div class="label"><span>CSS</span><span>90%</span></div>
+        <div class="track"><div class="fill w-90"></div></div>
+      </div>
+      <div class="bar">
+        <div class="label"><span>Responsive Design</span><span>85%</span></div>
+        <div class="track"><div class="fill w-85"></div></div>
+      </div>
+      <div class="bar">
+        <div class="label"><span>Java</span><span>80%</span></div>
+        <div class="track"><div class="fill w-80"></div></div>
+      </div>
+    </div>
+  </section>      
+  
+  <section id="projects" class="projects">      
+  <h2>Projects</h2>      
+  <div class="proj-list">      
+
+    <div>
+      <p class="proj-title">Number Counter</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Incre-decre-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">New Year 2026 Celebration</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/New-Year-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Ninja Practice Project</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Ninja-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Secret Crush Website</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Secrect-crush-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">To-Do List App</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Toodo-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Travel Moments</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Travel-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Techno Anniversary Project</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/TECHNO-ANIVERSARY-PROJECT/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Ask You Out 💌</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/asking-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Red Romantic Calculator</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Calaculator-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Magic Moment — Where Love Feels Right</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Dating-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Explore Madhya Pradesh</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Destination-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Hotel Sweet Moon</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/HotelSweetMoon-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">AI Tools Listing Website</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Ai-project/" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Movie Show Review</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/MovieShow-project" target="_blank">View Project</a>
+    </div>
+
+    <div>
+      <p class="proj-title">Techno Practice Project</p>
+      <a class="proj-btn" href="https://bhumikagupta982-source.github.io/Techno-project/" target="_blank">View Project</a>
+    </div>
+
+  </div>      
+</section>
+    
+  
+  <section id="certifications" class="certifications">      
+    <h2>Certifications</h2>      
+    <ul>      
+      <li>DCA — Diploma in Computer Applications</li>      
+      <li>Technician 5G Active Network Installation — Telecom Sector Skill Council</li>      
+      <li>Java & DSA — Techno Skill Coaching Classes</li>      
+    </ul>      
+  </section>      
+  
+  <section id="contact" class="contact">      
+    <h2>Contact Me</h2>      
+    <p>Have a question or want to collaborate? Drop me a message below 👇</p>      
+    <form action="mailto:bhumikagupta982@gmail.com" method="post" enctype="text/plain">      
+      <input type="text" name="Name" placeholder="Your Name" required>      
+      <input type="email" name="Email" placeholder="Your Email" required>      
+      <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>      
+      <button type="submit">Send Message</button>      
+    </form>      
+  </section>      
+        
+</body>      
+</html>
