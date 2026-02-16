@@ -406,6 +406,105 @@
       .hero h1 { font-size: 30px; }
       .hero img { width: 190px; }
     }
+    /* responsive banane ke liye new line */
+
+/* TABLET */
+@media (max-width:768px){
+
+ body{
+  padding-top:130px;
+ }
+
+ header{
+  flex-direction:column;
+  gap:10px;
+  text-align:center;
+ }
+
+ nav ul{
+  justify-content:center;
+ }
+
+ section{
+  margin:80px 15px 40px;
+  padding:30px;
+ }
+
+ .hero{
+  flex-direction:column-reverse;
+  text-align:center;
+  gap:18px;
+ }
+
+ .hero h1{
+  font-size:32px;
+ }
+
+ .hero img{
+  width:180px;
+  height:180px;
+ }
+
+ .typing{
+  white-space:normal;
+  word-break:break-word;
+ }
+
+ .proj-list{
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ }
+}
+
+
+/* MOBILE */
+@media (max-width:480px){
+
+ body{
+  padding-top:140px;
+ }
+
+ .logo{
+  font-size:20px;
+ }
+
+ nav a{
+  padding:8px 10px;
+  font-size:14px;
+ }
+
+ section{
+  margin:70px 12px 35px;
+  padding:24px;
+ }
+
+ .hero h1{
+  font-size:26px;
+ }
+
+ .hero img{
+  width:160px;
+  height:160px;
+ }
+
+ .typing{
+  font-size:14px;
+  line-height:1.4;
+ }
+
+ h2{
+  font-size:22px;
+ }
+
+ .proj-list{
+  grid-template-columns:1fr;
+ }
+
+ .contact input,
+ .contact textarea{
+  font-size:14px;
+ }
+}
+
   </style>      
 </head>      
 <body>      
